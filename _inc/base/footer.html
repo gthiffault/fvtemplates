@@ -1,0 +1,41 @@
+<footer class="c-footer">
+	<div class="c-footer_wrap">
+		<div class="o-wrapper">
+			<div class="c-grid">
+				<div class="c-grid_item -one">
+					<img src="{{ craft.app.sites.primarySite.baseUrl }}assets/images/logos/valens-logo-header--home.svg">
+				</div>
+				<div class="c-grid_item -two">
+					<p class="c-footer_title">{{"Contact us"|t}}</p>
+					{{global.infoHeadOffice|raw}}
+					<p><a href="mailto:{{global.infoEmail}}">{{global.infoEmail}}</a></p>
+					<p>{{global.infoPhone}}</p>
+				</div>
+				<div class="c-grid_item -three">
+					<p class="c-footer_title">{{"Business hours"|t}}</p>
+					<p>{{"Monday to Friday: "|t}}{{global.infoBusinessHoursMF}}
+					<br>{{"Saturday and Sunday: "|t}}{{global.infoBusinessHoursSS}}</p>
+					<p>Consultez nos horaires de livraison.</p>
+				</div>
+				<div class="c-grid_item -four">
+					<p class="c-footer_title">{{"Follow us"|t}}</p>
+					<ul class="o-list-bare c-social-media">
+						<li><a class="c-social-media_facebook" href="{{global.infoFacebook}}" target="_blank">Facebook</a></li>
+						<li><a class="c-social-media_linkedin" href="{{global.infoLinkedin}}" target="_blank">Linkedin</a></li>
+					</ul>
+				</div>
+				<div class="c-grid_item -five">
+					<p class="c-footer_title">Our certifications</p>
+					{% for block in global.ourCertifications %}
+			    		{% if block.type == "ourCertificationsTab" %}
+			        		<a href="{{ block.ourCertificationsWeb }}" target="_blank">
+			        			<img src="{{ block.ourCertificationsLogo.one().url() }}">
+			        		</a>
+			    		{% endif %}
+					{% endfor %}						
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div class="c-footer_copyright">© 2O18  Les Fermes Valens - Une signature de Zel</div>
+</footer>

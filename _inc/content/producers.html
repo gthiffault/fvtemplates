@@ -1,0 +1,17 @@
+<section class="c-our-producers">
+	<div class="o-wrapper">
+		<h2>{{'Our producers'|t}}</h2>
+		<div class="o-layout">
+			{% for block in entry.ourProducers %}
+			    {% if block.type == "ourProducersTab" %}
+					<div class="o-layout__item u-1/3">
+						<img src="{{block.ourProducersImage.one().url()}}" alt="{{block.ourProducersImage.one().title}}">
+			        	<p>{{ block.ourProducersName }}</p>
+			        	<p>{{block.ourProducersRole}}</p>
+			        	<p>{{block.ourProducersRoleYear}}</p>
+					</div>
+			    {% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

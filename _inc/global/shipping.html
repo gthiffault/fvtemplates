@@ -1,0 +1,50 @@
+<section class="c-services c-border">
+    <div class="grid-container">
+        <div class="c-services_shipping">
+            <div class="c-services_wrap -one">
+                <div class="c-services_wrap-one_content">
+                    <h3>{{entry.servicesShippingTitle}}</h3>
+                    {{entry.servicesShippingContent}}
+                    {% if entry.servicesOnlineOrderLink|length %}
+                        <a class="c-services_link" href="{{entry.servicesOnlineOrderLink.url()}}">{{"Learn more"|t}}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="c-services_img-one o-ratio o-ratio--custom" style="background: url('{{entry.servicesPhotoOne.one().url()}}')"></div>
+        <div class="c-services_shop">
+            <div class="c-services_wrap -three">
+                <div class="c-services_wrap-one_content">
+                    <h3>{{entry.servicesOnlineOrderTitle}}</h3>
+                    {{entry.servicesOnlineOrderContent}}
+                    {% if entry.servicesOnlineOrderLink|length %}
+                        <a class="c-services_link" href="{{entry.servicesOnlineOrderLink.url()}}">{{"Learn more"|t}}</a>
+                    {% endif %}
+                </div>
+            </div>   
+        </div>
+        <div class="c-services_img-two o-ratio o-ratio--custom" style="background: url('{{entry.servicesPhotoTwo.one().url()}}')"></div>
+        <div class="c-services_practice">
+            <div class="c-services_wrap -three">
+                <div class="c-services_wrap-one_content">
+                    <h3>{{entry.servicesOurPracticeTitle}}</h3>
+                    {{entry.servicesOurPracticeContent}}
+                    {% if entry.servicesOnlineOrderLink|length %}
+                        <a class="c-services_link" href="{{entry.servicesOnlineOrderLink.url()}}">{{"Learn more"|t}}</a>
+                    {% endif %}
+                </div>
+            </div>   
+        </div>
+        <div class="c-services_customer-area">
+            <div class="c-services_wrap -two">
+                <div class="c-services_wrap-one_content">
+                    <h3>{{entry.servicesCustomerAreaTitle}}</h3>
+                    {{entry.servicesCustomerAreaContent}}
+                    {% if entry.servicesOnlineOrderLink|length %}
+                        <a class="c-services_link" href="{{entry.servicesOnlineOrderLink.url()}}">{{"Learn more"|t}}</a>
+                    {% endif %}
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+{% extends "_layout/site" %}
+    {% block content %}
+    <div class="c-online-shop"> 
+        <div class="o-wrapper">
+        {% if currentSite.language == "fr" %}
+            <div> 
+                <script type='text/javascript' data-cfasync="false" src='https://app.ecwid.com/script.js?4227048'></script> 
+                <script type='text/javascript'> xProductBrowser("id=4227048","defaultCategoryId=8746647"); </script> 
+            </div>
+        {% else %}
+            <div>
+                <script type='text/javascript' data-cfasync="false" src='https://app.ecwid.com/script.js?4227048'></script> 
+                <script type='text/javascript'> xProductBrowser("id=4227048","defaultCategoryId=8746640"); </script> 
+            </div>
+        {% endif %} 
+    </div>      
+    </div>  
+    {% endblock %}

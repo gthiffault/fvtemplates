@@ -1,0 +1,8 @@
+<section class="c-gallery">
+	<div class="o-wrapper">
+		<h2>{{"Valens farms in picture"}}</h2>
+		{% for image in entry.galleryImages %}
+		<img src="{{image.url()}}">
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,17 @@
+<section class="c-img-content">
+	<div class="o-wrapper">
+		<div class="o-layout o-layout--reverse">
+			<div class="o-layout__item u-1/2">
+				<img src="{{entry.txtimgtwoimage.one().url()}}" alt="{{entry.txtimgtwoimage.one().title}}">
+			</div>
+			<div class="o-layout__item u-1/2">
+				<h2>{{entry.txtImgTwoTitle}}</h2>
+				{{entry.txtImgTwoContent}}
+				{% if entry.type == "delivery" %}
+				<p>		{{"Calculation of delivery charges"|t}}</p>
+					<input type="text" placeholder="{{'enter your Zipcode'|t}}">
+				{% endif %}					
+			</div>
+		</div>
+	</div>
+</section>

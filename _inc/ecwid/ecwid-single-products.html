@@ -1,0 +1,22 @@
+<section class="c-special c-border">
+    <div class="c-special_wrap">
+    <div class="o-wrapper -two">
+        <h2 class="u-text-center">{{'Our special of the month'|t}}</h2>    
+        <ul class="o-layout o-layout--large c-home_special">
+            {% for special in entry.specialsMonth.all %}
+                {% if special.type == "specialsMonthTab" %}
+                    <li class="o-layout__item u-1/3">
+                            {{special.specialsMonthCode|raw}}
+                        <div customprop="options"></div><div class="c-add" customprop="addtobag"></div>
+                    </div></div>
+                    </li>
+                    <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?4227048&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>    
+                {% endif %}
+            {% endfor %}
+        </ul> 
+        <div class="c-home_special_btn">
+        <a class="c-btn u-text-center c-btn--tertiary -two" href="">Consultez tous nos spéciaux</a>   
+        </div>
+    </div>
+    </div>    
+</section>
